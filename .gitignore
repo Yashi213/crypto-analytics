@@ -1,0 +1,52 @@
+# ---- Сборка (CMake / компилятор) ----
+/build/
+cmake-build-*/
+/out/
+*.o
+*.obj
+*.exe
+*.dll
+*.a
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# ---- Сгенерированные отчёты приложения ----
+/reports/
+*.pdf
+
+# ---- Временные дампы консоли (stdin/stdout/stderr) ----
+*_out.txt
+*_out[0-9].txt
+*_err.txt
+*_err[0-9].txt
+*_input.txt
+test_input.txt
+analytics_*.txt
+etl_*.txt
+reports_*.txt
+
+# ---- Среды разработки / системные файлы ----
+.vscode/
+.idea/
+.clangd
+.cache/
+compile_commands.json
+
+# ---- ОС ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# ---- Секреты / локальная конфигурация ----
+# Содержит хост/порт/пароль БД и ключи API — не коммитить.
+config/config.json
+
+# ---- Markdown-документы (кроме README) ----
+*.md
+!README.md
+
+# ---- Вспомогательные скрипты конвертации в PDF ----
+pdf_config.js
