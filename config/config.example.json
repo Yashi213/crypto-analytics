@@ -1,0 +1,38 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "dbname": "crypto_analytics",
+    "user": "postgres",
+    "password": "change_me"
+  },
+  "gateio": {
+    "base_url": "https://api.gateio.ws/api/v4",
+    "rate_limit_ms": 200
+  },
+  "coingecko": {
+    "base_url": "https://api.coingecko.com/api/v3",
+    "rate_limit_ms": 1500
+  },
+  "trading_pairs": ["BTC_USDT", "ETH_USDT", "SOL_USDT"],
+  "coingecko_ids": {
+    "BTC_USDT": "bitcoin",
+    "ETH_USDT": "ethereum",
+    "SOL_USDT": "solana"
+  },
+  "historical_days": 365,
+  "candlestick_interval": "1d",
+  "reports_dir": "reports",
+  "anomaly": {
+    "zscore_threshold": 3.0,
+    "iqr_multiplier": 1.5,
+    "ma_deviation_pct": 10.0,
+    "volume_spike_sigma": 3.0
+  },
+  "forecast": {
+    "sma_window": 14,
+    "ema_alpha": 0.2,
+    "linear_reg_window": 30,
+    "forecast_days": 7
+  }
+}

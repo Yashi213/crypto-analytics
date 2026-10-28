@@ -11,7 +11,8 @@
 DatabaseManager::DatabaseManager(const std::string& conn_str)
     : conn_str_(conn_str) {
     conn_ = std::make_unique<pqxx::connection>(conn_str);
-    LOG_INFO("Database connected: " + conn_str);
+    LOG_INFO("Database connected: " + std::string(conn_->dbname()) +
+             " (user: " + std::string(conn_->username()) + ")");
 }
 
 // ─── schema ───────────────────────────────────────────────────────────────────
